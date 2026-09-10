@@ -1,0 +1,263 @@
+/* ===================== base ===================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: system-ui, 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #2a2a2a 0%, #121212 45%, #000 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+/* ===================== cartão ===================== */
+.cartao {
+    width: 100%;
+    max-width: 420px;
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 40px 32px;
+    text-align: center;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.marca-icone { width: 30px; height: 30px; fill: #22c55e; }
+
+.marca-nome {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 28px;
+}
+
+/* ===================== botões sociais ===================== */
+.sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 26px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 13px 20px;
+    border: 1px solid #4a4a4a;
+    border-radius: 500px;
+    background-color: transparent;
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.15s ease, transform 0.08s ease;
+}
+
+.social:hover  { border-color: #fff; }
+.social:active { transform: scale(0.985); }
+
+.icone {
+    width: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #b3b3b3;
+}
+
+/* ===================== divisor ===================== */
+.divisor {
+    position: relative;
+    margin: 26px 0;
+}
+
+.divisor::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #2e2e2e;
+}
+
+.divisor span {
+    position: relative;
+    background: #121212;
+    padding: 0 14px;
+    color: #b3b3b3;
+    font-size: 13px;
+}
+
+/* ===================== formulário ===================== */
+.campo {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #4a4a4a;
+    border-radius: 4px;
+    background: #121212;
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.15s ease;
+}
+
+input::placeholder { color: #6e6e6e; }
+
+input[type="email"]:hover,
+input[type="password"]:hover { border-color: #b3b3b3; }
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 0 1px #fff;
+}
+
+/* ---- campo com erro ---- */
+input.invalido,
+input.invalido:focus {
+    border-color: #f15e6c;
+    box-shadow: 0 0 0 1px #f15e6c;
+}
+
+.erro {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #f15e6c;
+    font-size: 12.5px;
+    min-height: 18px;
+    margin-top: 6px;
+}
+
+.erro:not(:empty)::before {
+    content: "✕";
+    font-size: 11px;
+}
+
+/* ---- mostrar senha ---- */
+.senha-caixa { position: relative; }
+
+.senha-caixa input { padding-right: 84px; }
+
+.olho {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #b3b3b3;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.olho:hover { color: #fff; }
+
+/* ---- lembrar de mim ---- */
+.lembrar {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13.5px;
+    font-weight: 400;
+    margin: 18px 0 24px;
+    cursor: pointer;
+}
+
+.lembrar input {
+    width: 16px;
+    height: 16px;
+    accent-color: #22c55e;
+    cursor: pointer;
+}
+
+/* ---- botão entrar ---- */
+.entrar {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 500px;
+    background: #22c55e;
+    color: #000;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.08s ease, filter 0.15s ease;
+}
+
+.entrar:hover  { filter: brightness(1.08); transform: scale(1.02); }
+.entrar:active { transform: scale(0.99); }
+
+/* ===================== rodapé ===================== */
+.esqueci {
+    display: block;
+    margin: 22px 0;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.rodape {
+    padding-top: 22px;
+    border-top: 1px solid #2e2e2e;
+    color: #b3b3b3;
+    font-size: 14.5px;
+}
+
+.rodape a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 4px;
+}
+
+.politica {
+    margin-top: 24px;
+    color: #8a8a8a;
+    font-size: 11.5px;
+    line-height: 1.55;
+}
+
+.politica a { color: #8a8a8a; }
+
+a:hover { color: #22c55e !important; }
+
+/* ===================== celular ===================== */
+@media (max-width: 460px) {
+    .cartao { padding: 28px 20px; }
+    h1      { font-size: 23px; }
+}

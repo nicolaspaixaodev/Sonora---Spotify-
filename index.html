@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Sonora</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <main class="cartao">
+
+    <header class="topo">
+        <svg class="marca-icone" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="3" y="12" width="3.5" height="8" rx="1.75"/>
+            <rect x="9" y="8" width="3.5" height="16" rx="1.75"/>
+            <rect x="15" y="4" width="3.5" height="24" rx="1.75"/>
+            <rect x="21" y="9" width="3.5" height="14" rx="1.75"/>
+            <rect x="27" y="13" width="3.5" height="6" rx="1.75"/>
+        </svg>
+        <span class="marca-nome">Sonora</span>
+    </header>
+
+    <h1>Entrar na Sonora</h1>
+
+    <div class="sociais">
+      <button type="button" class="social"><span class="icone">G</span>Continuar com Google</button>
+      <button type="button" class="social"><span class="icone">f</span>Continuar com Facebook</button>
+      <button type="button" class="social"><span class="icone">&#63743;</span>Continuar com Apple</button>
+    </div>
+
+    <div class="divisor"><span>ou</span></div>
+
+    <form id="formulario" novalidate>
+
+      <div class="campo">
+        <label for="email">Email ou nome de usuário</label>
+        <input type="email" id="email" placeholder="voce@exemplo.com" autocomplete="username">
+        <p class="erro" id="erro-email"></p>
+      </div>
+
+      <div class="campo">
+        <label for="senha">Senha</label>
+        <div class="senha-caixa">
+          <input type="password" id="senha" placeholder="Sua senha" autocomplete="current-password">
+          <button type="button" class="olho" id="olho">Mostrar</button>
+        </div>
+        <p class="erro" id="erro-senha"></p>
+      </div>
+
+      <label class="lembrar">
+        <input type="checkbox" id="lembrar">
+        <span>Lembrar de mim</span>
+      </label>
+
+      <button type="submit" class="entrar">Entrar</button>
+
+    </form>
+
+    <a class="esqueci" href="#">Esqueci minha senha</a>
+
+    <div class="rodape">
+        <span>Não tem uma conta?</span>
+        <a href="#">Inscreva-se na Sonora</a>
+    </div>
+
+    <p class="politica">Ao se inscrever, você concorda com os <a href="#">Termos e Condições de Uso da Sonora</a>.</p>
+
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
