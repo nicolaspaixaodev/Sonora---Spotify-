@@ -2,7 +2,7 @@
 
 Tela de login de um player de música, feita com HTML, CSS e JavaScript puros.
 
-**Acesse:** _(link do GitHub Pages entra aqui)_
+**Acesse:** _[(link do GitHub Pages entra aqui)](https://nicolaspaixaodev.github.io/Sonora---Spotify-/)_
 
 ## O que tem
 
